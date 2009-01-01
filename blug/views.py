@@ -1,16 +1,18 @@
+from __future__ import with_statement
 from django.shortcuts import *
 import os,os.path,re,datetime
 
 format = re.compile(r'(\d+)-(\d+)-(\d+)-([-_a-z0-9]+).text')
 
 def list_entries():
-	for name in os.listdir('entries'):
-		match = format.match(name)
+	for filename in os.listdir('entries'):
+		match = format.match(filename)
 		if not match: continue
 		(yyyy,mm,dd,slug) = match.groups()
 		date = datetime.date(*map(int,(yyyy,mm,dd)))
 		url = '%s/%s/%s/%s/' % (yyyy,mm,dd,slug)
-		title = slug
+		with open(os.path.join('entries',filename)) as f:
+			title = f.readline().strip() or slug
 		yield dict(title=title, date=date, url=url)
 
 def index(request):
@@ -20,7 +22,8 @@ def index(request):
 def entry(request, yyyy, mm, dd, slug):
 	try:
 		filename = '%s-%s-%s-%s.text' % (yyyy,mm,dd,slug)
-		content = open(os.path.join('entries',filename)).read()
+		with open(os.path.join('entries',filename)) as f:
+			content = f.read()
 		return render_to_response('blug/entry.html', locals())
 	except IOError:
 		raise Http404
