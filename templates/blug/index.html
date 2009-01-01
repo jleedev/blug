@@ -1,0 +1,8 @@
+<!-- vim: set ft=htmldjango: -->
+<!doctype html>
+<title>index</title>
+<ul>
+{% for entry in listing %}
+<li><a href="{{entry.url}}">{{entry.date}} {{entry.title}}</a>
+{% endfor %}
+</ul>
