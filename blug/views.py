@@ -14,7 +14,7 @@ def list_entries():
 		yield dict(title=title, date=date, url=url)
 
 def index(request):
-	listing = sorted(list_entries(), key=lambda entry: entry['date'])
+	listing = sorted(list_entries(), key=lambda entry: entry['date'], reverse=True)
 	return render_to_response('blug/index.html', locals())
 
 def entry(request, yyyy, mm, dd, slug):
