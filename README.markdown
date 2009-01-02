@@ -16,3 +16,13 @@ Blug doesn't do anything fancy like layouts, templates, or related
 posts; but that's because it was written in an hour. There's just a flat
 list of posts, and they all get formatted and rendered against the same
 Django template.
+
+Notes
+=====
+
+* python-django and python-markdown are in Debian/Ubuntu.
+* You will need to grab smartypants.py yourself.
+* The repository needs to be a directory called `mysite`.
+
+Once everything is set up, just run `./manage.py runserver` and go to
+http://localhost:8000/blug/ to see it in action.
