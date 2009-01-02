@@ -18,7 +18,7 @@ list of posts, and they all get formatted and rendered against the same
 Django template.
 
 Notes
-=====
+-----
 
 * python-django and python-markdown are in Debian/Ubuntu.
 * You will need to grab smartypants.py yourself.
