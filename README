@@ -1,0 +1,18 @@
+Blug readme
+===========
+
+Blug is a tiny blog engine that uses [Django][], [Markdown][], and
+[Smartypants][] (actually [smartypants.py][]). It was inspired by Tom
+Preston-Werner's [Jekyll][], except it is written in Python instead of
+Ruby and runs as a web application instead of offline. What can I say, I needed something to do.
+
+[django]:           http://www.djangoproject.com/
+[markdown]:         http://daringfireball.net/projects/markdown/
+[smartypants]:      http://daringfireball.net/projects/smartypants/
+[jekyll]:           http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html
+[smartypants.py]:   http://web.chad.org/projects/smartypants.py/
+
+Installation and usage
+======================
+
+Self-explanatory.
