@@ -20,9 +20,9 @@ Django template.
 Notes
 -----
 
-* python-django and python-markdown are in Debian/Ubuntu.
-* You will need to grab smartypants.py yourself.
-* The repository needs to be a directory called `mysite`.
+* `python-django` and `python-markdown` are in Debian/Ubuntu.
+* Install smartypants.py with `easy_install smartypants`.
+* The repository needs to be a directory called `mysite`, due to `settings.py`.
 
 Once everything is set up, just run `./manage.py runserver` and go to
 http://localhost:8000/blug/ to see it in action.
