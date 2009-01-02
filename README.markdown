@@ -12,7 +12,7 @@ Ruby and runs as a web application instead of offline. What can I say, I needed 
 [jekyll]:           http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html
 [smartypants.py]:   http://web.chad.org/projects/smartypants.py/
 
-Installation and usage
-======================
-
-Self-explanatory.
+Blug doesn't do anything fancy like layouts, templates, or related
+posts; but that's because it was written in an hour. There's just a flat
+list of posts, and they all get formatted and rendered against the same
+Django template.
